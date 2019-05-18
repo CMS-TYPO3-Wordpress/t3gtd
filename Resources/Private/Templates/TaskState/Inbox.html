@@ -1,0 +1,16 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+    <h1>
+        <i class="fas fa-inbox"></i>
+        <f:translate key="tx_t3gtd_layout_default.inbox" />
+    </h1>
+
+    <f:render partial="TaskList/TaskStateList" arguments="{tasks:tasks,langKey:langKey,flashMessages:flashMessages}"/>
+
+    <f:link.action action="new" controller="Task"><i class="fas fa-plus-circle"></i>
+        <f:translate key="tx_t3gtd_template_task_inbox.newTask" />
+    </f:link.action>
+</f:section>
+</div>

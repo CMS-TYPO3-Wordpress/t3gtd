@@ -1,0 +1,13 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+    <h1>
+        <i class="fas fa-check-double"></i>
+        <f:translate key="tx_t3gtd_layout_default.next" />
+    </h1>
+
+    <f:render partial="TaskList/TaskStateList" arguments="{tasks:tasks,langKey:langKey}"/>
+
+</f:section>
+</div>

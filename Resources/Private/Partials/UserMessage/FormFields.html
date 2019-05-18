@@ -1,0 +1,9 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="form-group">
+<label for="messageText">
+	<f:translate key="tx_t3gtd_domain_model_usermessage.message_text" />
+</label>
+	<f:form.textarea id="messageText" property="messageText" cols="40" rows="5" class="form-control"/>
+</div>
+<f:form.hidden property="readByReceiver" value="0" class="form-control"/>
+</html>

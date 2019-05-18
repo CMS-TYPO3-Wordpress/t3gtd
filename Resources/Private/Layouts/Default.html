@@ -1,0 +1,275 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="tx-gtd" class="container">
+	<!--f:debug inline="true">{_ALL}</f:debug--->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="well sidebar-nav">
+				<ul class="nav nav-pills flex-column">
+					<li class="nav-item" ondrop="drop2inbox(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="taskstate_inbox" controller="TaskState" action="inbox" class="nav-link">
+							<i class="fas fa-inbox"></i>
+							<f:translate key="tx_t3gtd_layout_default.inbox" />
+						</f:link.action>
+					</li>
+					<li class="nav-item" ondrop="drop2today(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="taskstate_today"  controller="TaskState" action="today" class="nav-link">
+							<i class="fas fa-tasks"></i>
+							<f:translate key="tx_t3gtd_layout_default.today" />
+						</f:link.action>
+					</li>
+					<li class="nav-item" ondrop="drop2next(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="taskstate_next" controller="TaskState" action="next" class="nav-link">
+							<i class="fas fa-check-double"></i>
+							<f:translate key="tx_t3gtd_layout_default.next" />
+						</f:link.action>
+					</li>
+					<li class="nav-item" ondrop="drop2waiting(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="taskstate_waiting" controller="TaskState" action="waiting" class="nav-link">
+							<i class="far fa-hourglass"></i>
+							<f:translate key="tx_t3gtd_layout_default.waiting" />
+						</f:link.action>
+					</li>
+					<li class="nav-item">
+						<f:link.action id="taskstate_scheduled" controller="TaskState" action="scheduled" class="nav-link">
+							<i class="fas fa-calendar-alt"></i>
+							<f:translate key="tx_t3gtd_layout_default.scheduled" />
+						</f:link.action>
+					</li>
+					<li class="nav-item" ondrop="drop2someday(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="taskstate_someday" controller="TaskState" action="someday" class="nav-link">
+							<i class="fas fa-archive"></i>
+							<f:translate key="tx_t3gtd_layout_default.someday" />
+						</f:link.action>
+					</li>
+					<li class="nav-item" ondrop="drop2focus(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="star" controller="TaskState" action="focus" class="nav-link">
+							<i class="fas fa-lightbulb"></i>
+							<f:translate key="tx_t3gtd_layout_default.focus" />
+						</f:link.action>
+					</li>
+					<li class="nav-item" ondrop="drop2completed(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="taskstate_completed" controller="TaskState" action="completed" class="nav-link">
+							<i class="fas fa-check-square"></i>
+							<f:translate key="tx_t3gtd_layout_default.completed" />
+						</f:link.action>
+					</li>
+					<li class="nav-item" ondrop="drop2trash(event)" ondragover="allowDropOfTask(event)">
+						<f:link.action id="taskstate_trash" controller="TaskState" action="trash" class="nav-link">
+							<i class="fas fa-trash-alt"></i>
+							<f:translate key="tx_t3gtd_layout_default.trash" />
+						</f:link.action>
+					</li>
+					<li><hr/></li>
+					<li class="nav-item">
+						<f:link.action id="project_0_{langKey}"
+									   class="project_draggable nav-link"
+									   controller="Project"
+									   action="show"
+									   additionalAttributes="{ondrop:'drop2project(event)',ondragover:'allowDrop2Project(event)',draggable:'true'}">
+							<i class="fas fa-project-diagram"></i>
+							<f:translate key="tx_t3gtd_layout_default.projects" />
+						</f:link.action>
+						<ul>
+							<f:render partial="Project/Navigation"
+									  arguments="{navProjects:rootProjects,langKey:langKey}" />
+						</ul>
+					</li>
+					<li><hr/></li>
+					<li class="nav-item">
+						<f:link.action id="list_users"
+									   controller="UserAccount"
+									   action="list"
+									   class="nav-link">
+							<i class="fas fa-user-circle"></i>
+							<f:translate key="tx_t3gtd_layout_default.users" />
+						</f:link.action>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
+						   aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-globe"></i>
+							<f:translate key="tx_t3gtd_layout_default.context" />
+							(<f:switch expression="{langKey}">
+								<f:case value="0">{currentContext.nameDe}</f:case>
+								<f:case value="1">{currentContext.nameEn}</f:case>
+							</f:switch>)
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<f:for each="{contextList}" as="context">
+							<li>
+								<f:link.action controller="Context" action="switchContext"
+											   arguments="{context:context}">
+									<f:switch expression="{langKey}">
+										<f:case value="0">{context.nameDe}</f:case>
+										<f:case value="1">{context.nameEn}</f:case>
+									</f:switch>
+								</f:link.action>
+							</li>
+							</f:for>
+						</ul>
+					</li>
+					<li>
+						<f:link.action id="showUserConfig" controller="UserConfig" action="show" class="nav-link">
+							<i class="fas fa-user-cog"></i>
+							<f:translate key="tx_t3gtd_layout_default.settings" />
+						</f:link.action>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="tx-gtd">
+				<f:render section="main" />
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function drop2inbox(ev) {
+			ev.preventDefault();
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var myUrl = ev.dataTransfer.getData("data-target-move-to-inbox");
+				window.location.replace(myUrl);
+			}
+		}
+
+		function drop2today(ev) {
+			ev.preventDefault();
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var myUrl = ev.dataTransfer.getData("data-target-move-to-today");
+				window.location.replace(myUrl);
+			}
+		}
+
+		function drop2next(ev) {
+			ev.preventDefault();
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var myUrl = ev.dataTransfer.getData("data-target-move-to-next");
+				window.location.replace(myUrl);
+			}
+		}
+
+		function drop2waiting(ev) {
+			ev.preventDefault();
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var myUrl = ev.dataTransfer.getData("data-target-move-to-waiting");
+				window.location.replace(myUrl);
+			}
+    	}
+
+		function drop2someday(ev) {
+			ev.preventDefault();
+			var myUrl = ev.dataTransfer.getData("data-target-move-to-someday");
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				window.location.replace(myUrl);
+			}
+		}
+
+		function drop2focus(ev) {
+			ev.preventDefault();
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var myUrl = ev.dataTransfer.getData("data-target-move-to-focus");
+				window.location.replace(myUrl);
+			}
+		}
+
+		function drop2completed(ev) {
+			ev.preventDefault();
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var myUrl = ev.dataTransfer.getData("data-target-move-to-completed");
+				window.location.replace(myUrl);
+			}
+		}
+
+		function drop2trash(ev) {
+			ev.preventDefault();
+			var dragtype = ev.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var myUrl = ev.dataTransfer.getData("data-target-move-to-trash");
+				window.location.replace(myUrl);
+			}
+		}
+
+		function drop2project(event) {
+			event.preventDefault();
+			var dragtype = event.dataTransfer.getData("dragtype");
+			if(dragtype === "task") {
+				var targetProjectIdInfo = event.target.id;
+				var targetProjectId = targetProjectIdInfo.split("_")[1];
+				var srcTaskId = event.dataTransfer.getData("task").split("_")[1];
+				var action = "moveTaskToProject";
+				if(srcTaskId === "0"){
+					action = "moveTaskToRootProject";
+				} else {
+					action = "moveTaskToProject";
+				}
+				var myRootUrl = "<f:uri.page />";
+				var myUrl = myRootUrl + "?tx_t3gtd_frontendgtd[action]=" +
+						action +
+						"&tx_t3gtd_frontendgtd[controller]=TaskMoveToProject" +
+						"&tx_t3gtd_frontendgtd[task]=" +
+						srcTaskId +
+						"&tx_t3gtd_frontendgtd[targetProject]=" +
+						targetProjectId;
+				window.location.replace(myUrl);
+			} else if(dragtype === "project") {
+				var targetProjectIdInfo = event.target.id;
+				var targetProjectId = targetProjectIdInfo.split("_")[1];
+				var srcProjectId = event.dataTransfer.getData("project").split("_")[1];
+				var action = "moveProjectToProject";
+				if(srcProjectId === "0"){
+					action = "moveProjectToRootProject";
+				} else {
+					action = "moveProjectToProject";
+				}
+				var myRootUrl = "<f:uri.page />";
+				var myUrl = myRootUrl + "?tx_t3gtd_frontendgtd[action]="+
+						action +
+						"&tx_t3gtd_frontendgtd[controller]=ProjectMove" +
+						"&tx_t3gtd_frontendgtd[srcProject]=" +
+						srcProjectId +
+						"&tx_t3gtd_frontendgtd[targetProject]=" +
+						targetProjectId;
+				window.location.replace(myUrl);
+			}
+		}
+
+		function dropTask2Task(event) {
+			event.preventDefault();
+			var myUrl = "<f:uri.page />";
+			var requestPath = window.location.pathname;
+			var requestPathFirst = requestPath.split("/")[1];
+			var srcType = event.dataTransfer.getData("task").split("_")[0];
+			var sourceTaskId = event.dataTransfer.getData("task").split("_")[1];
+			var destinationTaskIdInfo = event.target.id;
+			var destinationTaskId = destinationTaskIdInfo.split("_")[1];
+			if(srcType === 'task') {
+				if(requestPathFirst === 'taskstate'){
+					myUrl = myUrl + "?tx_t3gtd_frontendgtd[action]=moveTaskOrder"+
+							"&tx_t3gtd_frontendgtd[controller]=Task" +
+							"&tx_t3gtd_frontendgtd[srcTask]=" +
+							sourceTaskId +
+							"&tx_t3gtd_frontendgtd[targetTask]=" +
+							destinationTaskId;
+					window.location.replace(myUrl);
+				} else if(requestPathFirst === 'project'){
+					myUrl = myUrl + "?tx_t3gtd_frontendgtd[action]=moveTaskOrderInsideProject"+
+							"&tx_t3gtd_frontendgtd[controller]=Task" +
+							"&tx_t3gtd_frontendgtd[srcTask]=" +
+							sourceTaskId +
+							"&tx_t3gtd_frontendgtd[targetTask]=" +
+							destinationTaskId;
+					window.location.replace(myUrl);
+				}
+			}
+		}
+	</script>
+	</div>
+</div>

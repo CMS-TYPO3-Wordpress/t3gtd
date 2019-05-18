@@ -1,0 +1,208 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:flashMessages/>
+
+<f:if condition="{tasks}">
+<table id="taskList" class="table table-striped" >
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.focus" /></th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.title" /></th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.text" /></th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.task_energy" /></th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.task_time" /></th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.due_date" /></th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.files" /></th>
+            <th><f:translate key="tx_t3gtd_domain_model_task.project" /></th>
+        </tr>
+    </thead>
+    <tbody>
+    <f:for each="{tasks}" as="task">
+        <tr id="task_{task.uid}"
+            class="task_draggable"
+            ondrop="dropTask2Task(event)"
+            ondragover="allowDropOfTask(event)"
+            draggable="true"
+            data-target-move-to-inbox="{f:uri.action(action: 'moveToInbox', arguments: {task : task}, controller: 'TaskMove', absolute:1, noCacheHash:0)}"
+            data-target-move-to-today="{f:uri.action(action: 'moveToToday', arguments: {task : task}, controller: 'TaskMove', absolute:1, noCacheHash:0)}"
+            data-target-move-to-next="{f:uri.action(action: 'moveToNext', arguments: {task : task}, controller: 'TaskMove', absolute:1, noCacheHash:0)}"
+            data-target-move-to-waiting="{f:uri.action(action: 'moveToWaiting', arguments: {task : task}, controller: 'TaskMove', absolute:1, noCacheHash:0)}"
+            data-target-move-to-someday="{f:uri.action(action: 'moveToSomeday', arguments: {task : task}, controller: 'TaskMove', absolute:1, noCacheHash:0)}"
+            data-target-move-to-completed="{f:uri.action(action: 'moveToCompleted', arguments: {task : task}, controller: 'TaskMove', absolute:1, noCacheHash:0)}"
+            data-target-move-to-trash="{f:uri.action(action: 'moveToTrash', arguments: {task : task}, controller: 'TaskMove', absolute:1, noCacheHash:0)}"
+            data-target-move-to-project="{f:uri.action(action: 'moveTaskToProject', arguments: {task : task,targetProject:null}, controller: 'TaskMoveToProject', absolute:1, noCacheHash:1)}"
+        >
+            <td class="task_draggable">
+                <f:if condition="{task.taskState} > 5">
+                    <f:then>
+                        <f:link.action controller="Task" action="undoneTask" arguments="{task : task}"
+                                       class="task_draggable taskStateDone"
+                                       id="task_{task.uid}_col_undone_task"
+                                       additionalAttributes="{ondrop:'dropTask2Task(event)',ondragover:'allowDropOfTask(event)',draggable:'true'}"
+                                       data="{
+                                       target-move-to-inbox:'{f:uri.action(action: \'moveToInbox\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-today:'{f:uri.action(action: \'moveToToday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-next:'{f:uri.action(action: \'moveToNext\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-waiting:'{f:uri.action(action: \'moveToWaiting\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-someday:'{f:uri.action(action: \'moveToSomeday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-completed:'{f:uri.action(action: \'moveToCompleted\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-trash:'{f:uri.action(action: \'moveToTrash\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-project:'{f:uri.action(action: \'moveTaskToProject\', arguments: {task : task,targetProject:null}, controller: \'TaskMoveToProject\', extensionName: \'gtd\', pluginName: \'Frontendgtd\', absolute:1, noCacheHash:1)}'
+                                       }">
+                            <i class="fas fa-check-circle"></i>
+                        </f:link.action>
+                    </f:then>
+                    <f:else>
+                        <f:link.action controller="Task" action="completeTask" arguments="{task : task}"
+                                       class="task_draggable taskStateNotDone "
+                                       id="task_{task.uid}_col_complete_task"
+                                       additionalAttributes="{ondrop:'dropTask2Task(event)',ondragover:'allowDropOfTask(event)',draggable:'true'}"
+                                       data="{
+                                       target-move-to-inbox:'{f:uri.action(action: \'moveToInbox\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-today:'{f:uri.action(action: \'moveToToday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-next:'{f:uri.action(action: \'moveToNext\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-waiting:'{f:uri.action(action: \'moveToWaiting\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-someday:'{f:uri.action(action: \'moveToSomeday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-completed:'{f:uri.action(action: \'moveToCompleted\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-trash:'{f:uri.action(action: \'moveToTrash\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-project:'{f:uri.action(action: \'moveTaskToProject\', arguments: {task : task,targetProject:null}, controller: \'TaskMoveToProject\', extensionName: \'gtd\', pluginName: \'Frontendgtd\', absolute:1, noCacheHash:1)}'
+                                       }">
+                            <i class="far fa-check-circle"></i>
+                        </f:link.action>
+                    </f:else>
+                </f:if>
+            </td>
+            <td>
+                <f:if condition="{task.focus}">
+                    <f:then>
+                        <f:link.action controller="Task" action="unsetFocus" arguments="{task : task}"
+                                       class="task_draggable"
+                                       id="task_{task.uid}_col_unsetfocus"
+                                       additionalAttributes="{ondrop:'dropTask2Task(event)',ondragover:'allowDropOfTask(event)',draggable:'true'}"
+                                       data="{
+                                       target-move-to-inbox:'{f:uri.action(action: \'moveToInbox\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-today:'{f:uri.action(action: \'moveToToday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-next:'{f:uri.action(action: \'moveToNext\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-waiting:'{f:uri.action(action: \'moveToWaiting\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-someday:'{f:uri.action(action: \'moveToSomeday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-completed:'{f:uri.action(action: \'moveToCompleted\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-trash:'{f:uri.action(action: \'moveToTrash\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-project:'{f:uri.action(action: \'moveTaskToProject\', arguments: {task : task,targetProject:null}, controller: \'TaskMoveToProject\', extensionName: \'gtd\', pluginName: \'Frontendgtd\', absolute:1, noCacheHash:1)}'
+                                       }">
+                            <i class="fas fa-lightbulb"></i>
+                        </f:link.action>
+                    </f:then>
+                    <f:else>
+                        <f:link.action controller="Task" action="setFocus" arguments="{task : task}"
+                                       class="task_draggable"
+                                       id="task_{task.uid}_col_setfocus"
+                                       additionalAttributes="{ondrop:'dropTask2Task(event)',ondragover:'allowDropOfTask(event)',draggable:'true'}"
+                                       data="{
+                                       target-move-to-inbox:'{f:uri.action(action: \'moveToInbox\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-today:'{f:uri.action(action: \'moveToToday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-next:'{f:uri.action(action: \'moveToNext\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-waiting:'{f:uri.action(action: \'moveToWaiting\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-someday:'{f:uri.action(action: \'moveToSomeday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-completed:'{f:uri.action(action: \'moveToCompleted\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-trash:'{f:uri.action(action: \'moveToTrash\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                                       target-move-to-project:'{f:uri.action(action: \'moveTaskToProject\', arguments: {task : task,targetProject:null}, controller: \'TaskMoveToProject\', extensionName: \'gtd\', pluginName: \'Frontendgtd\', absolute:1, noCacheHash:1)}'
+                                       }">
+                            <i class="far fa-lightbulb"></i>
+                        </f:link.action>
+                    </f:else>
+                </f:if>
+            </td>
+            <td>
+                <f:link.action
+                        controller="Task" action="edit" arguments="{task : task}"
+                        class="task_draggable"
+                        id="task_{task.uid}_{langKey}"
+                        additionalAttributes="{ondrop:'dropTask2Task(event)',ondragover:'allowDropOfTask(event)',draggable:'true'}"
+                   data="{
+                           target-move-to-inbox:'{f:uri.action(action: \'moveToInbox\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                           target-move-to-today:'{f:uri.action(action: \'moveToToday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                           target-move-to-next:'{f:uri.action(action: \'moveToNext\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                           target-move-to-waiting:'{f:uri.action(action: \'moveToWaiting\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                           target-move-to-someday:'{f:uri.action(action: \'moveToSomeday\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                           target-move-to-completed:'{f:uri.action(action: \'moveToCompleted\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                           target-move-to-trash:'{f:uri.action(action: \'moveToTrash\', arguments: {task : task}, controller: \'TaskMove\', absolute:1, noCacheHash:0)}',
+                           target-move-to-project:'{f:uri.action(action: \'moveTaskToProject\', arguments: {task : task,targetProject:null}, controller: \'TaskMoveToProject\', extensionName: \'gtd\', pluginName: \'Frontendgtd\', absolute:0, noCacheHash:1)}'
+                           }">
+                {task.title}
+                </f:link.action>
+            </td>
+            <td><f:format.crop maxCharacters="40">{task.text}</f:format.crop></td>
+            <td>
+                <f:switch expression="{task.taskEnergy}">
+                    <f:case value="0"></f:case>
+                    <f:case value="1">
+                        <span class="badge badge-success"><f:translate key="tx_t3gtd_tasklist_task_energy.low" /></span>
+                    </f:case>
+                    <f:case value="2">
+                        <span class="badge badge-primary"><f:translate key="tx_t3gtd_tasklist_task_energy.mid" /></span>
+                    </f:case>
+                    <f:case value="3">
+                        <span class="badge badge-danger"><f:translate key="tx_t3gtd_tasklist_task_energy.high" /></span>
+                    </f:case>
+                </f:switch>
+            </td>
+            <td>
+                <f:switch expression="{task.taskTime}">
+                    <f:case value="0"></f:case>
+                    <f:case value="1">
+                        <span class="badge badge-dark"><f:translate key="tx_t3gtd_tasklist_task_time.5min" /></span>
+                    </f:case>
+                    <f:case value="2">
+                        <span class="badge badge-dark"><f:translate key="tx_t3gtd_tasklist_task_time.10min" /></span>
+                    </f:case>
+                    <f:case value="3">
+                        <span class="badge badge-dark"><f:translate key="tx_t3gtd_tasklist_task_time.15min" /></span>
+                    </f:case>
+                    <f:case value="4">
+                        <span class="badge badge-dark"><f:translate key="tx_t3gtd_tasklist_task_time.30min" /></span>
+                    </f:case>
+                    <f:case value="5">
+                        <span class="badge badge-dark"><f:translate key="tx_t3gtd_tasklist_task_time.45min" /></span>
+                    </f:case>
+                    <f:case value="6">
+                        <span class="badge badge-secondary"><f:translate key="tx_t3gtd_tasklist_task_time.1hour" /></span>
+                    </f:case>
+                    <f:case value="7">
+                        <span class="badge badge-secondary"><f:translate key="tx_t3gtd_tasklist_task_time.2hours" /></span>
+                    </f:case>
+                    <f:case value="8">
+                        <span class="badge badge-secondary"><f:translate key="tx_t3gtd_tasklist_task_time.3hours" /></span>
+                    </f:case>
+                    <f:case value="9">
+                        <span class="badge badge-secondary"><f:translate key="tx_t3gtd_tasklist_task_time.4hours" /></span>
+                    </f:case>
+                    <f:case value="10">
+                        <span class="badge badge-secondary"><f:translate key="tx_t3gtd_tasklist_task_time.6hours" /></span>
+                    </f:case>
+                    <f:case value="11">
+                        <span class="badge badge-secondary"><f:translate key="tx_t3gtd_tasklist_task_time.8hours" /></span>
+                    </f:case>
+                    <f:case value="12">
+                        <span class="badge badge-warning"><f:translate key="tx_t3gtd_tasklist_task_time.more" /></span>
+                    </f:case>
+                </f:switch>
+            </td>
+            <td><f:format.date date="{task.dueDate}" format="{f:translate(key: 'tx_t3gtd.date_format')}" /></td>
+            <td>
+                <f:if condition="{task.files}">
+                    <i class="far fa-file-alt"></i>
+                </f:if>
+            </td>
+            <td>
+                <f:if condition="{task.project}">
+                    <f:link.action controller="Project" action="show" arguments="{project:task.project}">
+                        {task.project.name}
+                    </f:link.action>
+                </f:if>
+            </td>
+        </tr>
+    </f:for>
+    </tbody>
+</table>
+</f:if>
+</div>

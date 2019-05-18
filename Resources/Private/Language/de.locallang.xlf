@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-04-21T10:54:21Z" product-name="gtd">
+		<header/>
+		<body>
+			<trans-unit id="tx_t3gtd_project_show.new_child">
+				<source>New Child Project</source>
+				<target state="translated">Neues Teilprojekt</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_project_show.delete">
+				<source>Delete this Project</source>
+				<target state="translated">Lösche dieses Projekt</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.inbox">
+				<source>Inbox</source>
+				<target state="translated">Eingang</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.today">
+				<source>Today</source>
+				<target state="translated">Heute</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.next">
+				<source>Next</source>
+				<target state="translated">Als nächstes</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.waiting">
+				<source>Waiting</source>
+				<target state="translated">Warten</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.scheduled">
+				<source>Scheduled</source>
+				<target state="translated">Geplant</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.someday">
+				<source>Someday</source>
+				<target state="translated">Später</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.focus">
+				<source>Focus</source>
+				<target state="translated">Fokus</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.projects">
+				<source>Projects</source>
+				<target state="translated">Projekte</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.completed">
+				<source>Completed</source>
+				<target state="translated">Fertig</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.trash">
+				<source>Trash</source>
+				<target state="translated">Papierkorb</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.context">
+				<source>Context</source>
+				<target state="translated">Kontext</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.users">
+				<source>Users</source>
+				<target state="translated">Benutzer</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.createTestData">
+				<source>Create Test Data</source>
+				<target state="translated">Erzeuge Test Daten</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.settings">
+				<source>Settings</source>
+				<target state="translated">Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_user_config.show">
+				<source>Your Settings</source>
+				<target state="translated">Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_task_inbox.newTask">
+				<source>New Task</source>
+				<target state="translated">Neue Aufgabe</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_task_inbox.editTask">
+				<source>Edit Task</source>
+				<target state="translated">Aufgabe ändern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_task_inbox.createNew">
+				<source>Create New</source>
+				<target state="translated">Aufgabe erstellen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_task_edit.save">
+				<source>Save</source>
+				<target state="translated">Speichern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_task_edit.transform">
+				<source>transform Task Into Project</source>
+				<target state="translated">wandle Aufgabe um in ein Projekt</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_useraccount">
+				<source>User Account</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_useraccount.user_email">
+				<source>User Email</source>
+				<target state="translated">Email</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_useraccount.user_password">
+				<source>User Password</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_useraccount.user_fullname">
+				<source>User Fullname</source>
+				<target state="translated">Name</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_useraccount.messages">
+				<source>Messages</source>
+				<target state="translated">Nachrichten</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_useraccount.list">
+				<source>User</source>
+				<target state="translated">Benutzer</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_useraccount.username">
+				<source>User</source>
+				<target state="translated">Benutzerkonto</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage">
+				<source>User Message</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage.list">
+				<source>User Messages</source>
+				<target state="translated">Nachrichten</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage.send">
+				<source>Send</source>
+				<target state="translated">Senden</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage.message_text">
+				<source>Message Text</source>
+				<target state="translated">Neue Nachricht</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage.your_dialog_with">
+				<source>Your Dialog with</source>
+				<target state="translated">Ihr Dialog mit</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage.read_by_receiver">
+				<source>Read By Receiver</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage.sender">
+				<source>Sender</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_usermessage.receiver">
+				<source>Receiver</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context">
+				<source>Context</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_user_config.set_default_context">
+				<source>Set Default Context</source>
+				<target state="translated">Setze Kontext</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_user_config.save_default_context">
+				<source>Save Default Context</source>
+				<target state="translated">Speichere Kontext</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_user_config.edit_your_contexts">
+				<source>Edit Your Contexts</source>
+				<target state="translated">Bearbeite Kontexte</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.name_de">
+				<source>German</source>
+				<target state="translated">Deutsch</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.name_en">
+				<source>English</source>
+				<target state="translated">Englisch</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.edit">
+				<source>Edit</source>
+				<target state="translated">Ändern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.delete">
+				<source>Delete</source>
+				<target state="translated">Löschen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.new_context">
+				<source>New Context</source>
+				<target state="translated">Neuer Kontext</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.create_new">
+				<source>Create New</source>
+				<target state="translated">Kontext speichern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.save">
+				<source>Save</source>
+				<target state="translated">Kontext speichern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.edit_context">
+				<source>Edit Context</source>
+				<target state="translated">Kontext ändern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_context.user_account">
+				<source>User Account</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_project">
+				<source>Project</source>
+				<target state="translated">Projekt</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_project.name">
+				<source>Name</source>
+				<target state="translated">Name</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_project.description">
+				<source>Description</source>
+				<target state="translated">Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_project.context">
+				<source>Context</source>
+				<target state="translated">Kontext</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_project.user_account">
+				<source>User Account</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_project.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_project.children">
+				<source>Children</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task">
+				<source>Task</source>
+				<target state="translated">Aufgabe</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.title">
+				<source>Title</source>
+				<target state="translated">Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.focus">
+				<source>Focus</source>
+				<target state="translated">Fokus</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.task_state">
+				<source>Task State</source>
+				<target state="translated">Aufgaben Stand</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.last_task_state">
+				<source>Last Task State</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.task_energy">
+				<source>Task Energy</source>
+				<target state="translated">Energie</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.task_time">
+				<source>Task Time</source>
+				<target state="translated">Zeit</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.due_date">
+				<source>Due Date</source>
+				<target state="translated">Fälligkeit</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.order_id_project">
+				<source>Order Id Project</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.order_id_task_state">
+				<source>Order Id Task State</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.project">
+				<source>Project</source>
+				<target state="translated">Projekt</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.context">
+				<source>Context</source>
+				<target state="translated">Kontext</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.user_account">
+				<source>User Account</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.files">
+				<source>Files</source>
+				<target state="translated">Dateien</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_userconfig">
+				<source>User Config</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_userconfig.default_context">
+				<source>Default Context</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_userconfig.user_account">
+				<source>User Account</source>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.updated">
+				<source>Task is updated.</source>
+				<target state="translated">Aufgabe wurde aktualisiert.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.trash_emptied">
+				<source>Trash is emptied.</source>
+				<target state="translated">Papierkorb ist geleert.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.task2project">
+				<source>Task transformed into Project.</source>
+				<target state="translated">Aufgabe in Projekt umgewandelt.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.completed">
+				<source>Task is completed.</source>
+				<target state="translated">Aufgabe ist erledigt.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.notcompleted">
+				<source>Task is not completed.</source>
+				<target state="translated">Aufgabe ist nicht erledigt.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.focus">
+				<source>Task is now in Focus.</source>
+				<target state="translated">Aufgabe ist im Fokus.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.notfocus">
+				<source>Task is now out of Focus.</source>
+				<target state="translated">Aufgabe ist nicht im Fokus.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.new">
+				<source>Stored new Task.</source>
+				<target state="translated">Aufgabe neu erstellt.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_inbox">
+				<source>Task is moved to Inbox.</source>
+				<target state="translated">Aufgabe verschoben zum Eingang.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_today">
+				<source>Task is moved to Today.</source>
+				<target state="translated">Aufgabe verschoben nach Heute.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_next">
+				<source>Task is moved to Next.</source>
+				<target state="translated">Aufgabe verschoben zu als Nächstes.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_waiting">
+				<source>Task is moved to Waiting.</source>
+				<target state="translated">Aufgabe verschoben zu Warten.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_someday">
+				<source>Task is moved to Someday.</source>
+				<target state="translated">Aufgabe verschoben zu Später.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_completed">
+				<source>Task is moved to Completed.</source>
+				<target state="translated">Aufgabe verschoben zu Erledigt.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_trash">
+				<source>Task is moved to Trash.</source>
+				<target state="translated">Aufgabe wurde in den Papierkorb verschoben.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved2project">
+				<source>Task is moved to this Project.</source>
+				<target state="translated">Aufgabe wurde in dieses Projekt verschoben.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.moved_completed2trash">
+				<source>All completed Tasks are moved to Trash.</source>
+				<target state="translated">Alle erledigten Aufgaben verschoben in den Papierkorb.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.task.ordering">
+				<source>Changed Task Ordering.</source>
+				<target state="translated">Reihenfolge der Aufgaben geändert.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.project.updated">
+				<source>Project updated.</source>
+				<target state="translated">Projekt aktualisiert.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.project.deleted">
+				<source>Project deleted.</source>
+				<target state="translated">Projekt gelöscht.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.project.moved">
+				<source>Project moved.</source>
+				<target state="translated">Projekt verschoben.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.project.created">
+				<source>Project created.</source>
+				<target state="translated">Projekt erzeugt.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.testdata.created">
+				<source>Testdata created.</source>
+				<target state="translated">Testdaten erzeugt.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.userconfig.updated">
+				<source>The Default Context was changed.</source>
+				<target state="translated">Der Kontext wurde geändert.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_project.new">
+				<source>New Project</source>
+				<target state="translated">Neues Projekt</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_project.edit">
+				<source>Edit Project</source>
+				<target state="translated">Projekt bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_project_new.save">
+				<source>Create new</source>
+				<target state="translated">Neues Projekt speichern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_project_edit.save">
+				<source>Save Project</source>
+				<target state="translated">Projekt speichern</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.context.created">
+				<source>Context created.</source>
+				<target state="translated">Neuen Kontext gespeichert.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.context.updated">
+				<source>Context updated.</source>
+				<target state="translated">Kontext aktualisiert.</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.context.deleted">
+				<source>Context deleted.</source>
+				<target state="translated">Kontext gelöscht</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.trash.empty">
+				<source>Empty Trash</source>
+				<target state="translated">Papierkorb leeren</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd.date_format">
+				<source>m/d/Y</source>
+				<target state="translated">d.m.Y</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_layout_default.completed.move2trash">
+				<source>Move all Tasks to Trash</source>
+				<target state="translated">Alle Aufgaben in den Papierkorb legen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_task_inbox.editTask.dropHere">
+				<source>Drop Files for Upload Here</source>
+				<target state="translated">Dateien zum Hochladen hier ablegen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.files_upload">
+				<source>Add Files</source>
+				<target state="translated">Dateien hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_domain_model_task.files">
+				<source>Files</source>
+				<target state="translated">Dateien</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_energy.low">
+				<source>low</source>
+				<target state="translated">wenig</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_energy.mid">
+				<source>mid</source>
+				<target state="translated">mittel</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_energy.high">
+				<source>high</source>
+				<target state="translated">hoch</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.5min">
+				<source>5 min</source>
+				<target state="translated">5 Min</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.10min">
+				<source>10 min</source>
+				<target state="translated">10 Min</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.15min">
+				<source>15 min</source>
+				<target state="translated">15 Min</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.30min">
+				<source>30 min</source>
+				<target state="translated">30 Min</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.45min">
+				<source>45 min</source>
+				<target state="translated">45 Min</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.1hour">
+				<source>1 hour</source>
+				<target state="translated">1 Stunde</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.2hours">
+				<source>2 hours</source>
+				<target state="translated">2 Stunden</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.3hours">
+				<source>3 hours</source>
+				<target state="translated">3 Stunden</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.4hours">
+				<source>4 hours</source>
+				<target state="translated">4 Stunden</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.6hours">
+				<source>6 hours</source>
+				<target state="translated">6 Stunden</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.8hours">
+				<source>8 hours</source>
+				<target state="translated">8 Stunden</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_tasklist_task_time.more">
+				<source>more</source>
+				<target state="translated">Mehr</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_template_task_files.upload_button">
+				<source>Choose Files</source>
+				<target state="translated">Dateien auswählen</target>
+			</trans-unit>
+			<trans-unit id="tx_t3gtd_flash.context.cannot_delete">
+				<source>Can not be deleted, cause there are Tasks or Projects for this Context.</source>
+				<target state="translated">Kann nicht gelöscht werden, weil noch Projekte oder Aufgaben für diesen Kontext vorhanden sind.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

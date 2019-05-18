@@ -1,0 +1,19 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>
+	<i class="fas fa-project-diagram"></i>
+	<f:translate key="tx_t3gtd_project.new" />
+</h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" arguments="{object:Project}" />
+
+<f:form action="create" name="newProject" object="{newProject}" arguments="{parentProject:parentProject}">
+<f:render partial="Project/FormFields" />
+	<f:form.submit value="{f:translate(key:'tx_t3gtd_project_new.save')}" class="btn btn-default btn-primary" />
+</f:form>
+</f:section>
+</div>

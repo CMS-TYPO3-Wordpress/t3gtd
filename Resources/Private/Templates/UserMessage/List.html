@@ -1,0 +1,44 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+<h2>
+	<f:translate key="tx_t3gtd_domain_model_usermessage.list" />
+	<small><f:translate key="tx_t3gtd_domain_model_usermessage.your_dialog_with" /> {otherUser.name}</small>
+</h2>
+
+<f:flashMessages renderMode="div" />
+
+<f:render partial="FormErrors" arguments="{object:newUserMessage}" />
+
+<f:form action="create" name="newUserMessage" object="{newUserMessage}">
+	<f:form.hidden name="sender" value="{thisUser}" />
+	<f:form.hidden name="receiver" value="{otherUser}" />
+	<f:render partial="UserMessage/FormFields"/>
+	<f:form.submit value="{f:translate(key:'tx_t3gtd_domain_model_usermessage.send')}" class="btn btn-default btn-primary"/>
+</f:form>
+<br/>
+
+
+	<f:for each="{userMessages}" as="userMessage">
+		<f:if condition="{userMessage.sender.uid} == {otherUser.uid}">
+			<f:then>
+				<div class="alert alert-danger" role="alert" style="width: 66%; float:right">
+			</f:then>
+			<f:else>
+				<div class="alert alert-info" role="alert" style="width: 66%; float:left">
+			</f:else>
+		</f:if>
+		{userMessage.messageText}
+		<span style="float:right">
+    	<small>
+			<f:if condition="{userMessage.readByReceiver}">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true">
+			</f:if>
+		</small>
+		</span>
+		</div>
+	</f:for>
+
+</f:section>
+</div>

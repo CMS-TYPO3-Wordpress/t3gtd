@@ -1,0 +1,43 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>
+	<i class="fas fa-plus-circle"></i>
+	<f:translate key="tx_t3gtd_template_task_inbox.newTask" />
+</h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" arguments="{object:Task}" />
+
+<f:form id="taskUpdate" action="create"  name="newTask" object="{newTask}">
+<f:render partial="Task/FormFields" arguments="{taskEnergy:taskEnergy, taskTime:taskTime}"/>
+	<f:form.submit value="{f:translate(key:'tx_t3gtd_template_task_inbox.createNew')}" class="btn btn-default btn-primary" />
+</f:form>
+	<br/><br/>
+	<div class="well">
+		<div id="fileupload" class="row">
+			<div class="form-group">
+				<label for="upload" class="col-sm-2 control-label">
+					<i class="fas fa-upload"></i>
+					<f:translate key="tx_t3gtd_domain_model_task.files_upload" />
+				</label>
+				<div class="col-sm-8">
+					<f:form id="upload" action="uploadFiles" controller="Task" enctype="multipart/form-data" name="task"
+							object="{task}" class="form-horizontal">
+						<div id="drop">
+							<f:translate key="tx_t3gtd_template_task_inbox.editTask.dropHere" />
+							<input id="uploadFilesInput" type="file" name="upl" multiple="multiple"
+								   data-button-text="{f:translate(key:'tx_t3gtd_template_task_files.upload_button')}"/>
+						</div>
+						<ul>
+							<!-- The file uploads will be shown here -->
+						</ul>
+					</f:form>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:section>
+</div>

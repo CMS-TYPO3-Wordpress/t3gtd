@@ -1,0 +1,57 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="form-group">
+<label for="title">
+	<f:translate key="tx_t3gtd_domain_model_task.title" />
+</label><br />
+	<f:form.textfield id="title" property="title" class="form-control"/>
+</div>
+<div class="form-group">
+<label for="text">
+	<f:translate key="tx_t3gtd_domain_model_task.text" />
+</label><br />
+	<f:form.textarea id="text" property="text" cols="40" rows="15" class="form-control"/>
+</div>
+<div class="form-group">
+<label for="taskEnergy">
+	<f:translate key="tx_t3gtd_domain_model_task.task_energy" />
+</label><br />
+	<f:form.select id="taskEnergy" property="taskEnergy" options="{taskEnergy}" class="form-control"/>
+</div>
+<div class="form-group">
+<label for="taskTime">
+	<f:translate key="tx_t3gtd_domain_model_task.task_time" />
+</label><br />
+	<f:form.select id="taskTime" property="taskTime" options="{taskTime}" class="form-control"/>
+</div>
+<div class="form-group">
+<label for="taskDueDate">
+	<f:translate key="tx_t3gtd_domain_model_task.due_date" />
+</label><br />
+	<f:form.textfield id="taskDueDate" property="dueDate" value="{task.dueDate -> f:format.date(format:'Y-m-d')}"
+					  class="form-control"/>
+</div>
+	<f:if condition="{task.files}">
+	<div class="form-group">
+		<label for="files">
+			<f:translate key="tx_t3gtd_domain_model_task.files" />
+		</label>
+		<div id="files">
+			    <table class="table table-striped">
+				<f:for each="{task.files}" as="file">
+					<td>
+						<td>
+							<f:link.page pageUid="uploads/tx_t3gtd/{file.basename}" linkAccessRestrictedPages="TRUE"
+										 target="_blank">{file.basename}</f:link.page>
+						</td>
+						<td>
+							{file.filesize}
+							<f:form.hidden name="file[]" value="uploads/tx_t3gtd/{file.basename}" />
+						</td>
+					</tr>
+				</f:for>
+				</table>
+		</div>
+	</div>
+	</f:if>
+</div>
+

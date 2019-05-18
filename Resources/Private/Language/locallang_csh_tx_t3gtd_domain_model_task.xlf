@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-21T10:54:21Z" product-name="gtd">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="text.description">
+				<source>text</source>
+			</trans-unit>
+			<trans-unit id="focus.description">
+				<source>focus</source>
+			</trans-unit>
+			<trans-unit id="task_state.description">
+				<source>taskState</source>
+			</trans-unit>
+			<trans-unit id="last_task_state.description">
+				<source>lastTaskState</source>
+			</trans-unit>
+			<trans-unit id="task_energy.description">
+				<source>taskEnergy</source>
+			</trans-unit>
+			<trans-unit id="task_time.description">
+				<source>taskTime</source>
+			</trans-unit>
+			<trans-unit id="due_date.description">
+				<source>dueDate</source>
+			</trans-unit>
+			<trans-unit id="order_id_project.description">
+				<source>orderIdProject</source>
+			</trans-unit>
+			<trans-unit id="order_id_task_state.description">
+				<source>orderIdTaskState</source>
+			</trans-unit>
+			<trans-unit id="project.description">
+				<source>project</source>
+			</trans-unit>
+			<trans-unit id="context.description">
+				<source>context</source>
+			</trans-unit>
+			<trans-unit id="user_account.description">
+				<source>userAccount</source>
+			</trans-unit>
+			<trans-unit id="files.description">
+				<source>files</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-04-21T10:54:21Z" product-name="gtd">
+		<header/>
+		<body>
+			<trans-unit id="default_context.description">
+				<source>defaultContext</source>
+			</trans-unit>
+			<trans-unit id="user_account.description">
+				<source>userAccount</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
