@@ -11,6 +11,10 @@
 ChangeLog
 =========
 
+2.0.1
+-----
+Added Documentation.
+
 2.0.0
 -----
 Migrated EXT:gtd from TYPO3 7 LTS to Versions 8 and 9 LTS; renamed Extension to EXT:t3gtd.
