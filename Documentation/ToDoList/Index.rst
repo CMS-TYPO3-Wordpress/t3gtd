@@ -11,7 +11,7 @@
 To-Do list
 ==========
 
-Here are Milestones in the `roadmap <https://github.com/phasenraum2010/gtd/milestones>`_.
+Here are Milestones in the `roadmap <https://github.com/thomaswoehlke/t3gtd/milestones>`_.
 
 Bugs, Questions and Feature Requests can be reported / followed up at Github:
-`Issues <https://github.com/phasenraum2010/gtd/issues>`_.
+`Issues <https://github.com/thomaswoehlke/t3gtd/issues>`_.

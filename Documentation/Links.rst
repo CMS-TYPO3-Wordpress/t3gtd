@@ -12,13 +12,13 @@ Links
 -----
 
 :TER:
-	https://typo3.org/extensions/repository/view/gtd
+	https://typo3.org/extensions/repository/view/t3gtd
 
 :Bug Tracker:
-	https://github.com/phasenraum2010/gtd/issues
+	https://github.com/thomaswoehlke/t3gtd/issues
 
 :Git Repository:
-	https://github.com/phasenraum2010/gtd
+	https://github.com/thomaswoehlke/t3gtd
 
 :Contact:
-	`@ThomasWoehlke <https://twitter.com/ThomasWoehlke>`__
+	`ThomasWoehlke <mailto:thomas.woehlke@gmail.com>`__

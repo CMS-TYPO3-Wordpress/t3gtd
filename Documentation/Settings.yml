@@ -10,11 +10,11 @@
 
 ---
 conf.py:
-  copyright: 2016 Thomas Woehlke
-  epub_copyright: 2016
+  copyright: 2019 Thomas Woehlke
+  epub_copyright: 2019
   project: t3gtd
-  version: 0.10
-  release: 0.10.1
+  version: 2.0
+  release: 2.0.0
   intersphinx_mapping:
     t3tsref:
     - http://docs.typo3.org/typo3cms/TyposcriptReference/
