@@ -237,7 +237,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @throws StopActionException
      */
     protected function myRedirect(
-        $actionName='inbox',$controllerArguments=array(),$controllerName = 'Context'){
+        $actionName='inbox',$controllerArguments=array(),$controllerName = 'Project'){
         $langId=$this->getLanguageId();
         $pid = $this->uriBuilder->getTargetPageUid();
         $this->uriBuilder->reset()->setArguments(array('L' => $langId))->setTargetPageUid($pid);
