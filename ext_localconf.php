@@ -13,7 +13,7 @@ call_user_func(
             'UserAccount' => 'list',
             'UserMessage' => 'list, create',
             'UserConfig' => 'show, update',
-            'Context' => 'switchContext, new, create, edit, update, delete',
+            'Context' => 'switchContext, show, new, create, edit, update, delete',
             'Project' => 'list, show, new, create, edit, update, delete',
             'ProjectMove' => 'moveProjectToProject, moveProjectToRootProject',
             'Test' => 'createTestData'
@@ -27,7 +27,7 @@ call_user_func(
             'UserAccount' => 'list',
             'UserMessage' => 'list, create',
             'UserConfig' => 'show, update',
-            'Context' => 'switchContext, new, create, edit, update, delete',
+            'Context' => 'switchContext, show, new, create, edit, update, delete',
             'Project' => 'list, show, new, create, edit, update, delete',
             'ProjectMove' => 'moveProjectToProject, moveProjectToRootProject',
             'Test' => 'createTestData'
