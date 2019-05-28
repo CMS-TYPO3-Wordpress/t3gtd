@@ -40,7 +40,7 @@ class RemoveUnusedFilesController extends \TYPO3\CMS\Scheduler\Task\AbstractTask
             'TYPO3\\CMS\\Extbase\\Object\\ObjectManager'
         );
         /** @var \ThomasWoehlke\T3gtd\Domain\Repository\TaskRepository $taskRepository */
-        $taskRepository = $objectManager->get('ThomasWoehlke\\Gtd\\Domain\\Repository\\TaskRepository');
+        $taskRepository = $objectManager->get('ThomasWoehlke\\T3gtd\\Domain\\Repository\\TaskRepository');
         /** @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager */
         $configurationManager = $objectManager->get(
             'TYPO3\\CMS\\Extbase\\Configuration\\ConfigurationManagerInterface'
