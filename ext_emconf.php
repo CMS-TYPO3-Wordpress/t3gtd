@@ -35,4 +35,9 @@ $EM_CONF[$_EXTKEY] = [
             't3sbootstrap' => '4.1.18-4.3.3',
         ],
     ],
+    'autoload' => [
+        'psr-4' => [
+            'ThomasWoehlke\\T3gtd\\' => 'Classes',
+        ],
+    ],
 ];
