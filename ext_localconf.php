@@ -36,22 +36,22 @@ call_user_func(
             'ThomasWoehlke.' . $extKey,
             'Gtd', $cacheableActions, $nonCacheableActions
         );
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']
+        ['ThomasWoehlke\T3gtd\\Command\\TaskSchedulingController'] = array(
+             'extension' => $_EXTKEY,
+             'title' => 'Move scheduled Tasks to today, if dueDate is current day',
+             'description' => 'Move Tasks from TasksList Scheduled to TaskList Today, if their dueDate is the current day',
+             'additionalFields' => ''
+        );
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']
+        ['ThomasWoehlke\T3gtd\\Command\\RemoveUnusedFilesController'] = array(
+            'extension' => $_EXTKEY,
+            'title' => 'remove unused Files from deleted t3gtd-Tasks',
+            'description' => 'Files may be uploaded and added to task, after tasks are deleted these files may be unused',
+            'additionalFields' => ''
+        );
     },
     $_EXTKEY
 );
 
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']
-['ThomasWoehlke\\Gtd\\Command\\TaskSchedulingController'] = array(
-    'extension' => $_EXTKEY,
-    'title' => 'Move scheduled Tasks to today, if dueDate is current day',
-    'description' => 'Move Tasks from TasksList Scheduled to TaskList Today, if their dueDate is the current day',
-    'additionalFields' => ''
-);
 
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']
-['ThomasWoehlke\\Gtd\\Command\\RemoveUnusedFilesController'] = array(
-    'extension' => $_EXTKEY,
-    'title' => 'remove unused Files from deleted t3gtd-Tasks',
-    'description' => 'Files may be uploaded and added to task, after tasks are deleted these files may be unused',
-    'additionalFields' => ''
-);

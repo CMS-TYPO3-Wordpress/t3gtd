@@ -47,5 +47,3 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages(
     'tx_t3gtd_domain_model_usermessage'
 );
-
-?>
